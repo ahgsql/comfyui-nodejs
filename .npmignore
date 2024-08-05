@@ -1,0 +1,13 @@
+# Folders
+node_modules
+.storybook
+src
+readme_files
+workflows
+
+# Output of 'npm pack'
+*.tgz
+
+# Files
+.gitignore
+rollup.config.js

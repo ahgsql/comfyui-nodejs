@@ -1,0 +1,45 @@
+{
+  "name": "comfyui-nodejs",
+  "version": "1.0.0",
+  "description": "An ComfyUI NodeJs Module for Easy Inference with pre-made Workflows",
+  "type": "module",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahgsql/comfyui-nodejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ahgsql/comfyui-nodejs/issues"
+  },
+  "homepage": "https://github.com/ahgsql/comfyui-nodejs#readme",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "comfy-ui-client": "^0.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "ngrok": "^5.0.0-beta.2",
+    "tree-kill": "^1.2.2",
+    "uuid": "^10.0.0",
+    "ws": "^8.16.0"
+  },
+  "scripts": {
+    "publishnow": "npm publish --access public"
+  },
+  "keywords": [
+    "comfyui",
+    "express",
+    "saas",
+    "comfyui-as-a-service",
+    "image-generation"
+  ],
+  "author": "ahgsql",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "ahgsql",
+      "url": "https://github.com/ahgsql"
+    }
+  ]
+}
