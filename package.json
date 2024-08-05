@@ -1,6 +1,6 @@
 {
   "name": "comfyui-nodejs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An ComfyUI NodeJs Module for Easy Inference with pre-made Workflows",
   "type": "module",
   "main": "src/index.js",
