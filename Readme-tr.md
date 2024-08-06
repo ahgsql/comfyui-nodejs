@@ -22,6 +22,8 @@ npm install comfyui-workflow-loader
 
 ## Kullanım
 
+- ComfyUi bilgisayarınızda veya ulaşılabilir bir ağda açık ve çalışıyor olmalı
+
 ### Hazırlık
 
 ComfyUI'yi açın, iş akışınızı yükleyin veya düzenleyin, ardından API formatında kaydedin.
@@ -62,7 +64,7 @@ import { startComfyUi, initClient } from "./src/utils.js";
 import Workflowloader from "./src/index.js";
 
 // İstemciyi başlat
-let client = await initClient();
+let client = await initClient(/*comfyuiaddress*/); //varsayılan 127.0.0.1:8188
 await client.connect();
 
 // İş akışını yükle

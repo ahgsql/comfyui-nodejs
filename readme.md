@@ -22,6 +22,8 @@ npm install comfyui-nodejs
 
 ## Usage
 
+- Make sure ComfyUi is up and running on local network before use this module
+
 ### Preparing Workflow
 
 Open ComfyUI, load or edit your workflow, then save it in API format.
@@ -62,7 +64,7 @@ import { startComfyUi, initClient } from "comfyui-nodejs";
 import Workflowloader from "comfyui-nodejs";
 
 // Initialize the client
-let client = await initClient();
+let client = await initClient(/*comfyuiaddress*/); //defaults to 127.0.0.1:8188
 await client.connect();
 
 // Load the workflow
