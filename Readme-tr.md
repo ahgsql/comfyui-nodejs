@@ -17,7 +17,7 @@ ComfyUI Workflow Loader, ComfyUI iş akışlarını yönetmek ve manipüle etmek
 ComfyUI Workflow Loader'ı npm kullanarak yükleyin:
 
 ```bash
-npm install comfyui-workflow-loader
+npm install comfyui-nodejs
 ```
 
 ## Kullanım
