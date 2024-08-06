@@ -22,6 +22,39 @@ npm install comfyui-workflow-loader
 
 ## Kullanım
 
+### Hazırlık
+
+ComfyUI'yi açın, iş akışınızı yükleyin veya düzenleyin, ardından API formatında kaydedin.
+
+- İş akışını düzenleyerek yer tutucular ekleyin.
+- Yer tutucular süslü parantezler içinde olmalıdır.
+- Yollar veya diğer kaçış karakterleri iki kez yazılmalıdır.
+  Örnek:
+
+```json
+"ckpt_name": "Stable-diffusion\\SdXl\\sd_xl_turbo_1.0_fp16.safetensors"
+```
+
+Yollar için iki tane \ kullanılır.
+
+- Sayısal değerler için şu sözdizimini kullanın:
+
+```json
+ "width": {width}
+```
+
+({width} etrafında tırnak işareti yok)
+
+- Dizeler için (pozitif veya negatif prompt ya da model yolları gibi) şu sözdizimini kullanın:
+
+```json
+   "text": "{positive}"
+```
+
+(Yer tutucuların etrafında tırnak işaretleri var)
+
+- Projenizin kök dizinindeki "workflows" adlı bir klasöre kaydedin.
+
 ### Temel Kullanım
 
 ```javascript

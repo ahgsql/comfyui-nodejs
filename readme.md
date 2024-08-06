@@ -17,16 +17,49 @@ ComfyUI Workflow Loader is a Node.js library designed to manage and manipulate C
 Install ComfyUI Workflow Loader using npm:
 
 ```bash
-npm install comfyui-workflow-loader
+npm install comfyui-nodejs
 ```
 
 ## Usage
 
+### Preparing Workflow
+
+Open ComfyUI, load or edit your workflow, then save it in API format.
+
+- edit workflow to add placeholders.
+- Placeholders must be between curly braces.
+- Paths or other escape charachters should be doubled.
+  Ex:
+
+```json
+"ckpt_name": "Stable-diffusion\\SdXl\\sd_xl_turbo_1.0_fp16.safetensors"
+```
+
+there is two \ for paths.
+
+- For numeric values use syntax like this :
+
+```json
+ "width": {width}
+```
+
+, (No quotes around {width})
+
+- For strings ( like positive or negative prompt or model paths) use this syntax :
+
+```json
+   "text": "{positive}"
+```
+
+( quotes around placeholders)
+
+- Save it into a folder named "workflows" inside your project root
+
 ### Basic Usage
 
 ```javascript
-import { startComfyUi, initClient } from "./src/utils.js";
-import Workflowloader from "./src/index.js";
+import { startComfyUi, initClient } from "comfyui-nodejs";
+import Workflowloader from "comfyui-nodejs";
 
 // Initialize the client
 let client = await initClient();
@@ -53,6 +86,8 @@ flux.prepare({
   positive: "a giraffe",
   steps: 1,
 });
+//Or set individual placeholders.
+flux.width = 1024;
 await flux.generate();
 
 console.log("Done");
